@@ -7,4 +7,22 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Training-App';
+  name: string = "Akash"
+  str: string = "This string is stroed in variable in app.component.ts";
+  
+
+
+  message = false
+  choice = 2
+  users =[
+    {userID: 10 , firstName: 'Jenny'},
+    {userID: 20 , firstName: 'Akash'},
+  ];
+  readMe() {
+    this.message = !this.message
+    console.log(this.name+ this.str);
+  }
+
+  
 }
+

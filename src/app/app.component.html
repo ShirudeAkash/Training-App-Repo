@@ -2,5 +2,37 @@
 <h1>
     This is My First Angular App
 </h1>
-<!-- <app-my-first-component></app-my-first-component> -->
+
 <router-outlet></router-outlet>
+
+
+<a>Interploation example: </a> {{str}}
+
+<h2>Directives</h2>
+<div>
+<a>*ngIf</a>
+
+<button (click)="readMe()">Click me</button>
+
+<div *ngIf = "message; else anothermsg"> Showing data on buttons request</div>
+<ng-template #anothermsg><br>This is another message</ng-template> 
+
+</div>
+<br>
+<a>*ngSwitch</a>
+
+<div [ngSwitch]="choice" >
+
+    <div *ngSwitchCase="1">Ye kaunsi value hai , 1 hai</div>
+    <div *ngSwitchCase="2">Ye kaunsi value hai , 2 hai</div>
+
+</div>
+<br>
+<a>*ngFor</a>
+<table class="table">
+    <tr *ngFor = "let user of users">
+        <td>{{user.userID}}</td>
+        <td>{{user.firstName}}</td>
+    </tr>
+</table>
+
